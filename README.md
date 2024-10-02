@@ -19,7 +19,7 @@ The following guidelines need to be met:
 - Have the site hosted so a live demo can be viewed
 
 ## Differentiations From The Demo Video  
-- The live demo is not a perfect replica of the demo video, instead it intends to showcase the transitions and scroll events being utalised. 
+- The live demo is not a perfect replica of the demo video, instead it intends to showcase the transitions and scroll events being utilised. 
 - Some features were added to the live demo to increase the overall feel and functionlity of the site, such as a custom cursor, scroll indicator, hover events and text animations.
 
 ## Current Bugs 
