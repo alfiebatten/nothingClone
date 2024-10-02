@@ -125,8 +125,14 @@ function Landing() {
                 >
                     <div className='productInfo'>
                         <div className='titleContainer'>
-                            <p>Nothing</p>
-                            <p>Ear</p>
+                            <p>NOTHING</p>
+                            <div>
+                                <p className='spaceOut'>
+                                    <span>E</span>
+                                    <span>A</span>
+                                    <span>R</span>
+                                </p>
+                            </div>
                         </div>
                         <div className='features'>
                             <p>Premium 11 mm ceramic driver</p>

@@ -281,10 +281,46 @@
             }
             .titleContainer {
                 font-size: 5rem;
+                @include below(750px) {
+                    font-size: 3rem;
+                }
                 p {
                     margin: 0;
+                    text-transform: uppercase;
+                    -webkit-text-stroke: 1px white;
                     &:nth-last-child(1) {
-                        color: #F8DF31;
+                        color: transparent;
+                        -webkit-text-stroke: 1px #F8DF31;
+
+                    }
+
+                }
+                div {
+                    @include below(750px) {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .spaceOut {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 367px;
+                        font-size: 7rem;
+                        margin-top: 1rem;
+                        @include below(750px) {
+                            font-size: 5rem;
+                            width: 221px;
+                        }
+       
+                        span {
+                            &:nth-child(1) {
+                                transform: translateX(-2px);
+                            }
+                            &:nth-child(3) {
+                                transform: translateX(2px);
+                            }
+                        }
                     }
                 }
             }
