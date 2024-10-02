@@ -18,7 +18,6 @@ function Landing() {
         if (newAnimationState !== animationState) {
             setAnimationState(newAnimationState);
             setScrollPercentage(0); // Reset scroll percentage
-            console.log(`Transitioned to Animation State: ${newAnimationState}`);
         } else {
             // Update scroll percentage for the current section
             const sectionScrollPercentage = (currentScrollTop % viewportHeight) / viewportHeight * 100;
