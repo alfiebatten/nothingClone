@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 function Search({ className }) {
+    // Removing placeholder on click
     const [placeholder, setPlaceholder] = useState('search...');
 
     const handleFocus = () => {
