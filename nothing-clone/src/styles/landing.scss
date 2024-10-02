@@ -1,0 +1,269 @@
+.landing {
+    width: 100vw;
+    height: 300vh;
+    .nothingLogo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: auto;
+        max-width: 500px;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        transition: .25s ease-in-out;
+        &.load-state {
+            transform: translate(-50%,-50%);
+            opacity: 1;
+        }
+        &.first-animation {
+            transform: translate(-50%,calc(-50% - 500px));
+            opacity: 0;
+        }
+        &.second-animation {
+            transform: translate(-50%,calc(-50% - 500px));
+            opacity: 0;
+        }
+        &.third-animation {
+            transform: translate(-50%,calc(-50% - 500px));
+            opacity: 0;
+        }
+        path {
+            fill: #F8DF31;
+        }
+    }
+    .earbud-container {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh; 
+        z-index: 2;
+        .earbud {
+            transition: 0.25s ease-in-out; 
+            width: 50%;
+            &.load-state {
+                transform: scale(1);
+                opacity: 1;
+                filter: blur(50px);
+            }
+            &.first-animation {
+                transform: translate(0px, 50%) rotate(90deg) scale(2);
+                filter: blur(0px);
+            }
+            
+            &.second-animation {
+                transform: translate(-25%, 0%) rotate(55deg) scale(0.5);
+            }
+
+            &.third-animation {
+                transform: translate(-40%, 0%) rotate(90deg) scale(.75);
+            }
+        }
+        .earbudTwo {
+            position: absolute;
+            transition: 0.25s ease-in-out; 
+            width: 50%;
+            &.load-state {
+                transform: translate(25%, -125%) rotate(235deg) scale(0.5);
+            }
+            &.first-animation {
+                transform: translate(25%, -125%) rotate(200deg) scale(0.5);
+            }
+            
+            &.second-animation {
+                transform: translate(25%, 0%) rotate(235deg) scale(0.5);
+            }
+
+            &.third-animation {
+                transform: translate(125%, 0%) rotate(55deg) scale(0.5);
+            }
+        }
+    }
+    .sectionOne {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        color: white;
+        font-size: 5rem;
+        width: 50vw;
+        line-height: .8;
+        transition: .25s ease-in-out;
+        transform: translateX(-100%);
+        z-index: 3;
+        p {
+            margin: 0;
+        }
+        &.load-state {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        &.first-animation {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+        &.second-animation {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        &.third-animation {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+    .sectionTwo {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        color: white;
+        width: 100vw;
+        height: 100vh;
+        line-height: .8;
+        transition: .25s ease-in-out;
+        transform: translateX(-100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            margin: 0;
+            -webkit-text-stroke: 1px white;
+            font-size: 15rem;
+            text-align: center;
+            z-index: 1;
+            &:nth-child(2) {
+                color: transparent;
+            }
+        }
+        &.load-state {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        &.first-animation {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        &.second-animation {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+        &.third-animation {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+    .sectionThree {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        color: white;
+        width: 100vw;
+        height: 100vh;
+        line-height: .8;
+        transition: .25s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .background {
+            position: absolute;
+            top: 20vh;
+            left: 12.5%;
+            width: 50%;
+            max-width: 400px;
+            height: 60vh;
+            background-color: #F8DF31;
+            transition: .25s ease-in-out;
+            border-radius: 25px;
+        }
+        .productInfo {
+            position: absolute;
+            height: 560px;
+            top: 20vh;
+            color: white;
+            transition: .25s ease-in-out;
+            margin-left: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .titleContainer {
+                font-size: 5rem;
+                p {
+                    margin: 0;
+                    &:nth-last-child(1) {
+                        color: #F8DF31;
+                    }
+                }
+            }
+            .features {
+                margin: 0;
+                br {
+                    height: 10px;
+                }
+            }
+            button {
+                font-size: 1rem;
+                padding: .75rem 2rem;
+                background-color: #F8DF31;
+                border: none;
+                border-radius: 25px;
+            }
+            .dots {
+                display: flex;
+                gap: 1rem;
+                .dot {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: white;
+                }
+            }
+        }
+        &.load-state {
+            .background {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            .productInfo {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
+        &.first-animation {
+            .background {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            .productInfo {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
+        &.second-animation {
+            .background {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            .productInfo {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+        }
+        &.third-animation {
+            .background {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+            .productInfo {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+    }
+
+}
+
+
+
+
