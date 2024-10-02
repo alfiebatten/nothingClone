@@ -300,6 +300,7 @@
                 max-width: 150px;
                 cursor: pointer;
                 transition: .75s ease-in-out;
+                color: black;
                 @include below(750px) {
                     font-size: .8rem;
                 }
