@@ -3,12 +3,6 @@ body {
     position: relative;
 }
 
-body, html, button {
-    cursor: none !important;
-}
-
-* { cursor: none !important; }
-
 .ball {
     position: fixed;
     width: 4px;
