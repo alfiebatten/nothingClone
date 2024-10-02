@@ -18,7 +18,6 @@ function Landing() {
             setAnimationState(newAnimationState);
             console.log(`Transitioned to Animation State: ${newAnimationState}`);
         }
-
     }, [animationState]);
 
     useEffect(() => {
@@ -28,6 +27,7 @@ function Landing() {
             window.removeEventListener('scroll', handleScroll); // Clean up
         };
     }, [handleScroll]);
+
 
     return (
         <div className='container'>

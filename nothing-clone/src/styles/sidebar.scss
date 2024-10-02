@@ -26,7 +26,6 @@
         transform-origin: top left;
         margin-top: 1rem;
         margin-right: 1rem;
-        cursor: pointer;
         transition: .25s ease-in-out;
         border: 1px solid rgba(255,255,255,.0);
     
@@ -64,6 +63,10 @@
                 padding: 1rem 2rem;
                 border-radius: 25px;
                 transition: .25s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }

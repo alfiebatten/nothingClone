@@ -2,7 +2,7 @@
     width: 100vw;
     height: 400vh;
     .nothingLogo {
-        position: fixed;
+        position: sticky;
         top: 50%;
         left: 50%;
         width: 50%;
@@ -67,7 +67,9 @@
                     transform: translate(-20vw, 0%) rotate(90deg) scale(.75);
                 }
                 @include below(750px) {
-                    display: none;
+                    transform: translate(-100vw, 0%) rotate(90deg) scale(.75);
+                    opacity: 0;
+                    pointer-events: none;
                 }
             }
         }
