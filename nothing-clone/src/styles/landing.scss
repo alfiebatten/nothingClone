@@ -299,7 +299,7 @@
                 border-radius: 25px;
                 max-width: 150px;
                 cursor: pointer;
-                transition: .75s ease-in-out;
+                transition: .25s ease-in-out;
                 color: black;
                 @include below(750px) {
                     font-size: .8rem;
@@ -320,7 +320,7 @@
                     height: 15px;
                     border-radius: 50%;
                     background-color: white;
-                    transition: .75s ease-in-out;
+                    transition: .25s ease-in-out;
                     cursor: pointer;
                     &:nth-child(1) {
                         background-color: #F8DF31;
