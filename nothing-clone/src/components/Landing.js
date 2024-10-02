@@ -4,30 +4,36 @@ import Search from './Search';
 import Sidebar from './Sidebar';
 
 function Landing() {
-    const [animationState, setAnimationState] = useState(0); // 0 = load state, 1 = first animation, 2 = second animation, etc.
+    const [animationState, setAnimationState] = useState(0);
+    const [scrollPercentage, setScrollPercentage] = useState(0);
 
     const handleScroll = useCallback(() => {
         const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Calculate the current section based on scroll position
         const viewportHeight = window.innerHeight;
+    
+        // Calculate the current section based on scroll position
         const newAnimationState = Math.floor(currentScrollTop / viewportHeight);
-
-        // Ensure the animation state stays within bounds
+    
+        // Reset scrollPercentage when transitioning to a new section
         if (newAnimationState !== animationState) {
             setAnimationState(newAnimationState);
+            setScrollPercentage(0); // Reset scroll percentage
             console.log(`Transitioned to Animation State: ${newAnimationState}`);
+        } else {
+            // Update scroll percentage for the current section
+            const sectionScrollPercentage = (currentScrollTop % viewportHeight) / viewportHeight * 100;
+            setScrollPercentage(sectionScrollPercentage);
         }
     }, [animationState]);
+    
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll); // Clean up
+            window.removeEventListener('scroll', handleScroll);
         };
     }, [handleScroll]);
-
 
     return (
         <div className='container'>
@@ -153,6 +159,7 @@ function Landing() {
                     </div>
                 </div>
             </div>
+            <div className="scroll-indicator" style={{ width: `calc(${scrollPercentage}% - 2rem)` }} />
         </div>
     );
 }

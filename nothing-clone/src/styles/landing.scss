@@ -393,6 +393,20 @@
         }
     }
 
+    
+}
+.scroll-indicator {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust color as needed */
+    transition: height 0.2s ease;
+    z-index: 10; /* Make sure it stays on top */
+    height: 2px;
+    background-color: #F8DF31;
+    border-radius: 10px;
+
 }
 
 
