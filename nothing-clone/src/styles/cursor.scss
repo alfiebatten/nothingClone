@@ -1,0 +1,59 @@
+
+body {
+    position: relative;
+}
+
+body, html, button {
+    cursor: none !important;
+}
+
+* { cursor: none !important; }
+
+.ball {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #F8DF31;
+    border: 0px solid #F8DF31;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1002;
+    transition: border .2s ease-in-out;
+    cursor: none;
+    @include below(700px) {
+        display: none;
+    }
+    @media only screen and (max-height: 1024px) and (max-width: 1366px) {
+        display: none;
+    }
+    @media only screen and (orientation: portrait) {
+        display: none;
+    }
+}
+
+.cursor {
+    background-color: #F8DF31;
+    overflow: hidden;
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    transition: opacity .2s ease-in-out;
+    cursor: none;
+    @include below(700px) {
+        display: none;
+    }
+    @media only screen and (max-height: 1024px) and (max-width: 1366px) {
+        display: none;
+    }
+    @media only screen and (orientation: portrait) {
+        display: none;
+    }
+}
+
+  
