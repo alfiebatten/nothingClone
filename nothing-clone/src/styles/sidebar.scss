@@ -3,8 +3,13 @@
     top: 0%;
     left: 0;
     width: 50vh;
+    min-width: 400px;
     z-index: 10;
     transition: .5s ease-in-out .25s;
+    @media only screen and (max-height: 500px) {
+        width: calc(100vh - 6rem);
+        min-width: unset;
+    }
     &.load-state {
         opacity: 0;
     }

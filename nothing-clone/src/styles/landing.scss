@@ -175,6 +175,9 @@
             @include below(600px) {
                 font-size: 5rem;
             }
+            @media only screen and (max-height: 600px) {
+                font-size: 10rem;
+            }
             &:nth-child(1) {
                 animation: textColorOne 3s infinite linear;
                 transition: .75s ease-in-out .1s;
@@ -282,7 +285,6 @@
         }
         .productInfo {
             position: absolute;
-            height: 500px;
             width: calc(50vw - 5rem);
             top: 50%;
             left: 50vw;
@@ -294,6 +296,7 @@
             transform: translateY(-50%);
             margin-left: 5rem;
             transition: .75s ease-in-out .2s;
+            gap: 2rem;
             @include below(1000px) {
                 margin-left: 0;
             }
@@ -313,6 +316,13 @@
                 font-size: 5rem;
                 @include below(750px) {
                     font-size: 3rem;
+                }
+                @media only screen and (max-height: 650px) {
+                    font-size: 3rem;
+                    .spaceOut {
+                        font-size: 3rem !important;
+                        display: block !important;
+                    }
                 }
                 p {
                     margin: 0;
@@ -356,6 +366,17 @@
             }
             .features {
                 margin: 0;
+                p {
+                    @media only screen and (max-height: 650px) {
+                        font-size: .8rem;
+                    }
+                    &:nth-child(1) {
+                        margin-top: 0;
+                    }
+                    &:nth-last-child(1) {
+                        margin-bottom: 0;
+                    }
+                }
             }
             button {
                 font-size: 1rem;
@@ -368,6 +389,9 @@
                 transition: .25s ease-in-out;
                 color: black;
                 @include below(750px) {
+                    font-size: .8rem;
+                }
+                @media only screen and (max-height: 650px) {
                     font-size: .8rem;
                 }
                 &:hover {
