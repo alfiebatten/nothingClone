@@ -1,13 +1,13 @@
 import React from 'react';
 import Placeholder from '../assets/placeholder.webp';
-function Nav() {
-  return (
-    <div className='nav' id='nav'>
-        <div className='leftContainer'>
-            <div className='left'>
+
+function Sidebar({ className }) {
+    return (
+        <div className={`sidebarContainer ${className}`} id='sidebar'>
+            <div className='sidebar'>
                 <div className='infoContainer'>
                     <img src={Placeholder}/>
-                    <p>some text</p>
+                    <p>Alfie Batten</p>
                 </div>
                 <div className='logoContainer'>
                     <svg width="375" height="68" viewBox="0 0 375 68" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,15 +16,7 @@ function Nav() {
                 </div>
             </div>
         </div>
-        <div className='top'>
-            <div className='search'>
-                <input type='text' placeholder='search...'/>
-                <button className='arrow'>arrow</button>
-            </div>
-            <button className='explore'>Explore</button>
-        </div>
-    </div>
-  );
+      );
 }
 
-export default Nav;
+export default Sidebar;

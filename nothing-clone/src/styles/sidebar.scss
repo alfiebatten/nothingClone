@@ -1,26 +1,18 @@
-.nav {
+.sidebarContainer {
     position: fixed;
+    top: 0%;
+    left: 0;
+    width: 50vh;
     z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    animation: fadeIn .25s linear forwards 1.25s;
-    pointer-events: none;
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    transition: .5s ease-in-out .25s;
+    &.load-state {
+        opacity: 0;
     }
-    .leftContainer {
-        position: absolute;
-        top: 0%;
-        left: 0;
-        width: 50vh;
+    @include below(750px) {
+        transform: scale(.5);
+        transform-origin: top left;
     }
-    .left {
+    .sidebar {
         width: 100%;
         height: 100%;
         display: flex;
@@ -34,6 +26,21 @@
         transform-origin: top left;
         margin-top: 1rem;
         margin-right: 1rem;
+        cursor: pointer;
+        transition: .25s ease-in-out;
+        border: 1px solid rgba(255,255,255,.0);
+    
+        &:hover {
+            background-color: rgba(20,20,20,.9);
+            border: 1px solid rgba(255,255,255,.05);
+            .logoContainer svg {
+                background-color: white;
+                path {
+                    fill: black;
+                }
+            }
+    
+        }
         .infoContainer {
             display: flex;
             align-items: center;
@@ -56,6 +63,7 @@
                 height: calc(50px - 2rem);
                 padding: 1rem 2rem;
                 border-radius: 25px;
+                transition: .25s ease-in-out;
             }
         }
     }
@@ -68,6 +76,20 @@
         .search {
             display: flex;
             align-items: center;
+            &:hover {
+                input {
+                    background-color: rgba(20,20,20,.9);
+                    border: 1px solid rgba(255,255,255,.05);
+                }
+                .arrow {
+                    background-color: white;
+                    transition: .25s ease-in-out;
+                    svg {
+                        transform: rotate(0deg);
+                    }
+                }
+    
+            }
             input {
                 background-color: rgba(20,20,20,.75);
                 backdrop-filter: blur(10px);
@@ -78,7 +100,11 @@
                 max-width: 250px;
                 width: 250px;
                 cursor: pointer;
-
+                transition: .25s ease-in-out;
+                border: 1px solid rgba(255,255,255,0);
+                &:active, &:focus {
+                    outline: none;
+                }
             }
             .arrow {
                 width: 45px;
@@ -88,6 +114,17 @@
                 border: none;
                 transform: translateX(calc(-100% - 2.5px));
                 cursor: pointer;
+                padding: .9rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: .25s ease-in-out;
+                svg {
+                    width: 100%;
+                    height: auto;
+                    transform: rotate(-45deg);
+                    transition: .25s ease-in-out;
+                }
             }
         }
         .explore {
@@ -97,6 +134,11 @@
             padding: 1rem 2rem;
             margin-left: -45px;
             cursor: pointer;
+            transition: .25s ease-in-out;
+            &:hover {
+                background-color: white;
+            }
         }
-    }
+    }    
 }
+

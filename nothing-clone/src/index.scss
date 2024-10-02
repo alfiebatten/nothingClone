@@ -1,10 +1,18 @@
+@mixin below($width) {
+	@media screen and (max-width: $width) {
+	  @content;
+	}
+}  
+
 html, #root, body {
     margin: 0;
     min-height: 100vh;
     min-width: 100vw;
     background-color: black;
-    position: relative
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
 }
 
-@import './styles/nav.scss';
+@import './styles/search.scss';
+@import './styles/sidebar.scss';
 @import './styles/landing.scss';
