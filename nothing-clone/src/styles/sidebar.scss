@@ -69,13 +69,6 @@
                 }
             }
         }
-    }
-    .top {
-        display: flex;
-        gap: 1rem;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
         .search {
             display: flex;
             align-items: center;
@@ -138,11 +131,11 @@
             margin-left: -45px;
             cursor: pointer;
             transition: .25s ease-in-out;
-            color: black;
             &:hover {
                 background-color: white;
             }
         }
-    }    
+    }
+
 }
 
