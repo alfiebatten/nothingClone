@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import EarBud from '../assets/earBud.png';
+import EarBud from '../assets/earBud.webp';
 import Search from './Search';
 import Sidebar from './Sidebar';
 
 function Landing() {
     const [animationState, setAnimationState] = useState(0);
     const [scrollPercentage, setScrollPercentage] = useState(0);
-    
+
     const handleScroll = useCallback(() => {
         const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const viewportHeight = window.innerHeight;
