@@ -107,18 +107,40 @@ function Landing() {
                 >
                     <p>Our technology to take music to new realms</p>
                 </div>
-                <div
-                    className={`sectionTwo ${
+                <div className='sectionTwo'>
+                    <p
+                    className={`${
                         animationState === 0 ? 'load-state' :
                         animationState === 1 ? 'first-animation' :
                         animationState === 2 ? 'second-animation' :
                         animationState === 3 ? 'third-animation' :
                         ''
                     }`}
-                >
-                    <p>Evolved</p>
-                    <p>Evolved</p>
-                    <p>Evolved</p>
+                    >
+                        Evolved
+                    </p>
+                    <p
+                    className={`${
+                        animationState === 0 ? 'load-state' :
+                        animationState === 1 ? 'first-animation' :
+                        animationState === 2 ? 'second-animation' :
+                        animationState === 3 ? 'third-animation' :
+                        ''
+                    }`}
+                    >
+                        Evolved
+                    </p>
+                    <p
+                    className={`${
+                        animationState === 0 ? 'load-state' :
+                        animationState === 1 ? 'first-animation' :
+                        animationState === 2 ? 'second-animation' :
+                        animationState === 3 ? 'third-animation' :
+                        ''
+                    }`}
+                    >
+                        Evolved
+                    </p>
                 </div>
                 <div
                     className={`sectionThree ${
