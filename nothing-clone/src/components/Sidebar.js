@@ -6,7 +6,7 @@ function Sidebar({ className }) {
         <div className={`sidebarContainer ${className}`} id='sidebar'>
             <div className='sidebar'>
                 <div className='infoContainer'>
-                    <img src={Placeholder}/>
+                    <img src={Placeholder} alt='placeholder image'/>
                     <p>Alfie Batten</p>
                 </div>
                 <div className='logoContainer'>

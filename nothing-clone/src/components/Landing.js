@@ -5,7 +5,6 @@ import Sidebar from './Sidebar';
 
 function Landing() {
     const [animationState, setAnimationState] = useState(0); // 0 = load state, 1 = first animation, 2 = second animation, etc.
-    const [lastScrollTop, setLastScrollTop] = useState(0); // Store last scroll position
 
     const handleScroll = useCallback(() => {
         const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -20,7 +19,6 @@ function Landing() {
             console.log(`Transitioned to Animation State: ${newAnimationState}`);
         }
 
-        setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // For mobile or negative scrolling
     }, [animationState]);
 
     useEffect(() => {
